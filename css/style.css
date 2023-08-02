@@ -149,7 +149,7 @@ body {
 
 .player-one-title {
   margin-top: 170px;
-  margin-left: 35px;
+  margin-left: 37px;
 }
 
 .player-two-title {
@@ -185,6 +185,51 @@ body {
   transition: 0.4s;
   margin-bottom: 10px;
   font-size: 18px;
+}
+.player-one-btn-five {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  color: black;
+  width: 120px;
+  height: 30px;
+  background-color: rgb(0, 200, 255);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 12px 2px white;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-size: 18px;
+}
+.player-two-btn-five {
+  position: absolute;
+  color: black;
+  width: 120px;
+  height: 30px;
+  background-color: rgb(245, 95, 65);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 12px 2px white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.4s;
+  margin-bottom: 10px;
+  font-size: 18px;
+  top: 100px;
+  right: 200px;
+}
+
+.key-three {
+  position: absolute;
+  top: 80px;
+  right: 200px;
+}
+.key-four {
+  position: absolute;
+  top: 160px;
+  right: 200px;
 }
 
 .player-one-btn:hover {
@@ -260,4 +305,17 @@ body {
 .right-wrapper {
   display: block;
   justify-content: center;
+}
+
+.finger,
+.panda {
+  position: absolute;
+}
+
+.finger {
+  margin-left: -310px;
+}
+
+.panda {
+  margin-left: 319px;
 }

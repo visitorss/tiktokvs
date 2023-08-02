@@ -45,6 +45,8 @@ let leftWin = document.querySelector(".left-win");
 let rightWin = document.querySelector(".right-win");
 let Draw = document.querySelector(".draw");
 let secondDraw = document.querySelector(".second-draw");
+let playerOneFiveBtn = document.querySelector(".player-one-btn-five");
+let playerTwoFiveBtn = document.querySelector(".player-two-btn-five");
 let leftCount = 0;
 let rightCount = 0;
 let winnerLeftCount = 0;
@@ -55,6 +57,20 @@ let rightPlayer = 0;
 
 var timeInSecs;
 var ticker;
+
+playerOneFiveBtn.addEventListener("click", () => {
+  leftCount += five;
+  playerLeftCount.innerHTML = leftCount;
+  let primaryPlayer = parseInt(playerLeftCount.innerHTML);
+  leftPlayer = primaryPlayer;
+});
+
+playerTwoFiveBtn.addEventListener("click", () => {
+  rightCount += five;
+  playerRightCount.innerHTML = rightCount;
+  let secondPlayer = parseInt(playerRightCount.innerHTML);
+  rightPlayer = secondPlayer;
+});
 
 function tick() {
   var secs = timeInSecs;
@@ -126,8 +142,16 @@ window.addEventListener("keypress", (e) => {
     playerRightCount.innerHTML = rightCount;
     let secondPlayer = parseInt(playerRightCount.innerHTML);
     rightPlayer = secondPlayer;
-  } else if (e.key === "Enter") {
-    startButton();
+  } else if (e.key === "3") {
+    leftCount += five;
+    playerLeftCount.innerHTML = leftCount;
+    let primaryPlayer = parseInt(playerLeftCount.innerHTML);
+    leftPlayer = primaryPlayer;
+  } else if (e.key === "4") {
+    rightCount += five;
+    playerRightCount.innerHTML = rightCount;
+    let secondPlayer = parseInt(playerRightCount.innerHTML);
+    rightPlayer = secondPlayer;
   }
 });
 
