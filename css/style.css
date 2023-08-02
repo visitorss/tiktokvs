@@ -6,7 +6,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 body {
-  background-color: black;
+  background-color: #05260a;
 }
 
 .main-container {
@@ -147,6 +147,15 @@ body {
   font-size: 22px;
 }
 
+.bg {
+  position: absolute;
+  z-index: -10;
+  width: 1200px;
+  top: 100px;
+
+  left: -260px;
+}
+
 .player-one-title {
   margin-top: 170px;
   margin-left: 37px;
@@ -273,17 +282,17 @@ body {
   background-color: rgba(0, 0, 0, 0.221);
   border-radius: 50%;
   z-index: 100;
-  animation: win 0.5s;
+  animation: win 1s;
 }
 
 @keyframes win {
   from {
     opacity: 0;
-    margin-top: -100px;
+    transform: scale(5);
   }
   to {
-    margin-top: 10px;
     opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -318,4 +327,59 @@ body {
 
 .panda {
   margin-left: 319px;
+}
+
+.onex {
+  position: absolute;
+  top: 75px;
+  left: 245px;
+  font-size: 14px;
+}
+
+.tenx {
+  position: absolute;
+  font-size: 14px;
+  left: 196px;
+  top: 75px;
+}
+
+.cowboy {
+  position: absolute;
+  top: 0px;
+  left: 130px;
+}
+
+.cap {
+  position: absolute;
+  width: 60px !important;
+  height: 50px;
+  left: 550px;
+}
+
+.xxx {
+  position: absolute;
+  font-size: 14px;
+  top: 75px;
+  left: 140px;
+}
+
+.tikxone {
+  position: absolute;
+  font-size: 14px;
+  top: 75px;
+  left: 463px;
+}
+
+.pandaxten {
+  position: absolute;
+  font-size: 14px;
+  top: 75px;
+  left: 507px;
+}
+
+.capxx {
+  position: absolute;
+  font-size: 14px;
+  top: 75px;
+  left: 560px;
 }

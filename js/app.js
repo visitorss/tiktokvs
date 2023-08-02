@@ -51,7 +51,8 @@ let leftCount = 0;
 let rightCount = 0;
 let winnerLeftCount = 0;
 let WinnerRightCount = 0;
-let five = 5;
+let ten = 10;
+let morePoint = 500;
 let leftPlayer = 0;
 let rightPlayer = 0;
 
@@ -59,14 +60,14 @@ var timeInSecs;
 var ticker;
 
 playerOneFiveBtn.addEventListener("click", () => {
-  leftCount += five;
+  leftCount += ten;
   playerLeftCount.innerHTML = leftCount;
   let primaryPlayer = parseInt(playerLeftCount.innerHTML);
   leftPlayer = primaryPlayer;
 });
 
 playerTwoFiveBtn.addEventListener("click", () => {
-  rightCount += five;
+  rightCount += ten;
   playerRightCount.innerHTML = rightCount;
   let secondPlayer = parseInt(playerRightCount.innerHTML);
   rightPlayer = secondPlayer;
@@ -113,7 +114,7 @@ function startButton() {
   clearInterval(ticker);
 
   setTimeout(() => {
-    startTimer(5 * 60); // 4 minutes in seconds
+    startTimer(0.1 * 60); // 4 minutes in seconds
     function startTimer(secs) {
       timeInSecs = parseInt(secs);
       ticker = setInterval("tick()", 1000);
@@ -143,12 +144,22 @@ window.addEventListener("keypress", (e) => {
     let secondPlayer = parseInt(playerRightCount.innerHTML);
     rightPlayer = secondPlayer;
   } else if (e.key === "3") {
-    leftCount += five;
+    leftCount += ten;
     playerLeftCount.innerHTML = leftCount;
     let primaryPlayer = parseInt(playerLeftCount.innerHTML);
     leftPlayer = primaryPlayer;
   } else if (e.key === "4") {
-    rightCount += five;
+    rightCount += ten;
+    playerRightCount.innerHTML = rightCount;
+    let secondPlayer = parseInt(playerRightCount.innerHTML);
+    rightPlayer = secondPlayer;
+  } else if (e.key === "9") {
+    leftCount += morePoint;
+    playerLeftCount.innerHTML = leftCount;
+    let primaryPlayer = parseInt(playerLeftCount.innerHTML);
+    leftPlayer = primaryPlayer;
+  } else if (e.key === "0") {
+    rightCount += morePoint;
     playerRightCount.innerHTML = rightCount;
     let secondPlayer = parseInt(playerRightCount.innerHTML);
     rightPlayer = secondPlayer;
