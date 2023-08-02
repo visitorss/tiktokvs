@@ -114,7 +114,7 @@ function startButton() {
   clearInterval(ticker);
 
   setTimeout(() => {
-    startTimer(0.1 * 60); // 4 minutes in seconds
+    startTimer(5 * 60); // 4 minutes in seconds
     function startTimer(secs) {
       timeInSecs = parseInt(secs);
       ticker = setInterval("tick()", 1000);
